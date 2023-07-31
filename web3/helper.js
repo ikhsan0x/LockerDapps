@@ -3,6 +3,14 @@ if (window.location.href.endsWith(".html")) {
   const newURL = window.location.href.slice(0, -5); // Remove last 5 characters (.html)
   history.pushState({}, '', newURL);
 }
+
+// Check if the URL does not end with .html
+if (!window.location.href.endsWith(".html")) {
+  // Append .html to the URL and redirect
+  const newURL = window.location.href + ".html";
+  window.location.href = newURL;
+}
+
 $(document).ready(function(){
     $(".preloader").fadeOut();
 });
