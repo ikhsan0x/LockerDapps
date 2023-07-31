@@ -4,12 +4,17 @@ if (window.location.href.endsWith(".html")) {
   history.pushState({}, '', newURL);
 }
 
-// Check if the URL does not end with .html
-if (!window.location.href.endsWith(".html")) {
-  // Append .html to the URL and redirect
-  const newURL = window.location.href + ".html";
-  window.location.href = newURL;
+// Function to check if the URL should be redirected to .html version
+function redirectHTML() {
+  const path = window.location.pathname;
+  const pagesToRedirect = ['/create', '/claim'];
+  
+  // Check if the current path is in the pagesToRedirect array and does not end with .html
+  if (pagesToRedirect.includes(path) && !path.endsWith('.html')) {
+    window.location.href = path + '.html';
+  }
 }
+redirectHTML();
 
 $(document).ready(function(){
     $(".preloader").fadeOut();
