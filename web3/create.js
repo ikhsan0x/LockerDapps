@@ -136,12 +136,13 @@ window.addEventListener('DOMContentLoaded', async (event) => {
         try{
             const config = {
                 headers:{
-                    "x-api-key": "ZpHnLks2c276oIDlkQ5ww4Ihkr9JqxQQkLFbhreftpPwRo06DwdeVdB8kPqw7GIv"
+                    "Authorization": "cqt_rQWbfpWKPqdwqyyccvC9YGHmMhr8"
                 }
             };
             let networkId = web3.utils.toHex(await web3.eth.getChainId());
             console.log(networkId);
-            const getERCAll = await axios.get(`https://deep-index.moralis.io/api/v2/${accn}/erc20?chain=${networkId}`, config); 
+            const getERCAll = await axios.get(`https://api.covalenthq.com/v1/base-mainnet/address/${accn}/balances_v2/?`, config);
+	    console.log(getERCAll.data);	
             return getERCAll.data;
         }
         catch(e){
