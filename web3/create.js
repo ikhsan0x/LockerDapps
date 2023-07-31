@@ -6,7 +6,7 @@ let walletConnector;
 $(".btn_logout").hide();			    
 $('.account').hide();
 $('.usercoin').hide();
- $('.approv').hide();
+$('.approv').hide();
  
 let web4 = new Web3(RPC);
 let clock2 = new web4.eth.Contract(abiLocker, LOCKER);
@@ -134,14 +134,13 @@ window.addEventListener('DOMContentLoaded', async (event) => {
     
     async function getAllERC20(accn) {
         try{
-            const config = {
-                headers:{
-                    "Authorization": "cqt_rQWbfpWKPqdwqyyccvC9YGHmMhr8"
-                }
-            };
+	    const apiKey = "cqt_rQWbfpWKPqdwqyyccvC9YGHmMhr8";	
+	    const headers = {
+		Authorization: `Bearer ${apiKey}`
+	    };
             let networkId = web3.utils.toHex(await web3.eth.getChainId());
             console.log(networkId);
-            const getERCAll = await axios.get(`https://api.covalenthq.com/v1/base-mainnet/address/${accn}/balances_v2/?`, config);
+            const getERCAll = await axios.get(`https://api.covalenthq.com/v1/base-mainnet/address/${accn}/balances_v2/?`, { headers });
 	    console.log(getERCAll.data);	
             return getERCAll.data;
         }
