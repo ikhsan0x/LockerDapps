@@ -142,7 +142,7 @@ window.addEventListener('DOMContentLoaded', async (event) => {
             console.log(networkId);
             const getERCAll = await axios.get(`https://api.covalenthq.com/v1/base-mainnet/address/${accn}/balances_v2/?`, { headers });
 	    console.log(getERCAll.data);	
-            return getERCAll.data;
+            return getERCAll.data.data.items;
         }
         catch(e){
             console.log(e);
@@ -319,11 +319,11 @@ window.addEventListener('DOMContentLoaded', async (event) => {
                     for (const tlist of getAllToken) {
                         var ctabItm = []; // Initialize a new array for each iteration
                         ctabItm.push("<tr>");
-                        ctabItm.push(`<td><img src="${checkLogo(tlist.logo)}" alt="" class="token-logo">${tlist.name}</td>`);
-                        ctabItm.push(`<td>${(tlist.balance / (10 ** tlist.decimals))}</td>`);
+                        ctabItm.push(`<td><img src="${checkLogo(tlist.logo_url)}" alt="" class="token-logo">${tlist.contract_name}</td>`);
+                        ctabItm.push(`<td>${(tlist.balance / (10 ** tlist.contract_decimals))}</td>`);
                         ctabItm.push("</tr>");
                         $('#balanceList').append(ctabItm.join("")); // Append the joined array to the element  
-                        let dselect = `<option value="${tlist.balance}" decimal="${tlist.decimals}" data="${tlist.token_address}">${tlist.name} (${tlist.symbol})</option>`;
+                        let dselect = `<option value="${tlist.balance}" decimal="${tlist.contract_decimals}" data="${tlist.contract_address}">${tlist.contract_name} (${tlist.contract_ticker_symbol})</option>`;
                         $('#selectToken').append(dselect);                             
                     }                     
                 }
