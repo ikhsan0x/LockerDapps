@@ -1,22 +1,22 @@
 // PLEASE SETUP ALL THIS PARAMETER TO CORRECT NETWORK
 
-let LOCKER = "0x90b5Bd0B9CbC634b5147662AAd3Fa27Bb56DC996";
+let LOCKER = "0x2aa8eF542AAe3b4e7ef5626562e2f6015f76cF31";
 
 var logoToken = 'bnb.png';
-var RPC = "https://rpc.ankr.com/bsc_testnet_chapel";
-var explorer = 'https://testnet.bscscan.com';
-var baseChainId = 97;
-var netName = "tBSC";
+var RPC = "https://developer-access-mainnet.base.org";
+var explorer = 'https://basescan.org';
+var baseChainId = 8453;
+var netName = "BASE MAINNET";
 $('#runningNet').text(netName);
 
-var paramNet = [{ chainId: '0x38' }];
+var paramNet = [{ chainId: '0x2105' }];
 var paramAdd = [
     {
-        chainId: '0x38',
-        chainName: 'BSC',
+        chainId: '0x2105',
+        chainName: 'ETH',
         nativeCurrency: {
-            name: 'BNB',
-            symbol: 'BNB',
+            name: 'ETH',
+            symbol: 'ETH',
             decimals: 18
         },					
         rpcUrls: [RPC],
@@ -29,6 +29,3 @@ var walletOption = {
     rpc: {56:'https://rpc.ankr.com/bsc'},
     chainId: 56
 };
-
-var cids = 'binancecoin'; //this is API id, you can find this on coin info coingecko
-var coingeckoAPI = `https://api.coingecko.com/api/v3/simple/price?ids=${cids}&vs_currencies=usd`;
