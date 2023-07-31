@@ -1,3 +1,8 @@
+// Check if the URL contains .html and remove it from the URL using history.pushState
+if (window.location.href.endsWith(".html")) {
+  const newURL = window.location.href.slice(0, -5); // Remove last 5 characters (.html)
+  history.pushState({}, '', newURL);
+}
 $(document).ready(function(){
     $(".preloader").fadeOut();
 });
