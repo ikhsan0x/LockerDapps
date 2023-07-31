@@ -181,7 +181,9 @@ function getNetworkSymbol(networkId) {
     case 25:
       return 'CRO'; 
     case 250:
-        return 'FTM';        
+        return 'FTM'; 
+    case 8453:
+          return 'ETH';
     default:
       return 'UNKNOWN'; // Unknown network
   }
