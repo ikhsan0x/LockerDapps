@@ -1,8 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<?php 
-    include 'config.php';
-?>
 <head>
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -13,17 +10,17 @@
     <meta name="keywords" content="token lock, dapps, token erc20">
     <meta name="author" content="kevin">  
     
-    <link rel="icon" href="<?php print $favicons; ?>" type="image/x-icon">
+    <link rel="icon" href="img/token/bnb.png" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="stylesheet" href="css/all.min.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/ionicons.min.css">
     <link rel="stylesheet" href="css/jquery.mcustomscrollbar.min.css">
     <link rel="stylesheet" href="css/doogle.css">
-	<link rel='stylesheet' href='css/magnific-popup.css'>
-	<link rel='stylesheet' href='css/modal_popup.css?v=<?php print rand(); ?>'>
-    <link rel="stylesheet" href="css/style.css?v=<?php print rand(); ?>">
-    <link rel="stylesheet" href="css/my.css?v=<?php print rand(); ?>">
+    <link rel='stylesheet' href='css/magnific-popup.css'>
+    <link rel='stylesheet' href='css/modal_popup.css'>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/my.css">
     <link rel="stylesheet" type="text/css" href="css/notify.css">
     
 	<!--  web3 lib -->
@@ -33,22 +30,37 @@
 </head>
 
 <style>
-.stakeBg {<?php print $stakeBg; ?>}
-.wrapedStat {<?php print $refBg; ?>}
-.unlocks a {<?php print $btnUnlockBg; ?>}
-.base_btn {<?php print $baseBtn; ?>}
-.grid-item {<?php print $statBg; ?>}
-.refText {<?php print $textRefBg; ?>}
+.stakeBg {
+	background: #000;
+}
+.wrapedStat {
+	background: #000;
+}
+.unlocks a {
+	background-image: linear-gradient(to right, #0acc95 0%, #F17674 100%);
+}
+.base_btn {
+	background-image: linear-gradient(to right, #01adb7 0%, #000000 100%);
+}
+.grid-item {
+	background-image: linear-gradient(to right, #02aab4 0%, #000000 100%)
+}
+.refText {
+	background: linear-gradient(to right top, #12b2a5, #04dd8a, #7eff3c, #12b2a5, #120037);
+	-webkit-background-clip: text;
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
 </style>
 
-<body id="dark" style="<?php print $mainBg ?>">
+<body id="dark" style="background: linear-gradient(109.6deg, rgba(0, 0, 0, 0.93) 11.2%, #343a40 78.9%);">
     <div class="preloader">
       <div class="loading">
-        <img src="<?php print $favicons; ?>" width="100">
+        <img src="img/token/bnb.png" width="100">
       </div>
     </div>  
     <header class="dark-bb">
-    <nav class="navbar navbar-expand-lg" style="<?php print $headerBg ?>">
+    <nav class="navbar navbar-expand-lg" style="background: #000 !important;">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#headerMenu" aria-controls="headerMenu" aria-expanded="false" aria-label="Toggle navigation">
         <i><img src="img/menu.png" width="36"></i>
         </button>
@@ -103,16 +115,16 @@
                 </div>
                 <div class="col-md-6">
                     <div class="footer-text">
-                        <p>Copyright © <?php echo date("Y"); ?> Locker Dapps v1.0.0</p>
+                        <p>Copyright © 2023 Locker Dapps v1.0.0</p>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="footer-menu">
                         <ul>
-                            <li><a href="<?php print $telegram ?>"><i class="fab fa-telegram-plane"></i></a></li>
-                            <li><a href="<?php print $twitter ?>"><i class="fab fa-twitter"></i></a></li>
-                            <li><a href="<?php print $github ?>"><i class="fab fa-medium"></i></a></li>
-                            <li><a href="<?php print $reddit ?>"><i class="fab fa-reddit"></i></a></li>
+                            <li><a href=""><i class="fab fa-telegram-plane"></i></a></li>
+                            <li><a href=""><i class="fab fa-twitter"></i></a></li>
+                            <li><a href=""><i class="fab fa-medium"></i></a></li>
+                            <li><a href=""><i class="fab fa-youtube"></i></a></li>
                         </ul>
                     </div>
                 </div>
@@ -132,13 +144,13 @@
     <script src="js/jquery.magnific-popup.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-	<script src="js/notify.js"></script>    
+    <script src="js/notify.js"></script>    
     <script src="js/axios.min.js"></script>
     
-    <script src="web3/abi.js?v=<?php print rand(); ?>"></script>
-    <script src="setup.js?v=<?php print rand(); ?>"></script>
+    <script src="web3/abi.js"></script>
+    <script src="setup.js"></script>
     
-    <script src="web3/helper.js?v=<?php print rand(); ?>"></script>
-    <script src="web3/mylock.js?v=<?php print rand(); ?>"></script>
+    <script src="web3/helper.js"></script>
+    <script src="web3/mylock.js"></script>
 </body>
 </html>
