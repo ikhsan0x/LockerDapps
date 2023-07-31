@@ -1,0 +1,329 @@
+/*==============================
+	Modal
+==============================*/
+.modal {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 40px auto;
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 30px 20px;
+  width: 100%;
+  max-width: 420px;
+}
+.modal .mfp-close {
+  display: none;
+}
+.modal__close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  border-radius: 20px;
+}
+.modal__close svg {
+  fill: black;
+  transition: fill 0.4s ease;
+  height: auto;
+  width: 24px;
+}
+.modal__close:hover svg {
+  fill: #a754e2;
+}
+.modal--article {
+  max-width: 800px;
+}
+.modal__title {
+  font-size: 32px;
+  color: #343434;
+  font-family: 'Jura', sans-serif;
+  font-weight: 600;
+  line-height: 100%;
+  display: block;
+  margin-top: 0;
+  margin-bottom: 30px;
+  text-align: center;
+  width: 100%;
+}
+.modal__text {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 16px;
+  line-height: 26px;
+}
+.modal__text a {
+  position: relative;
+  color: #ff4f00;
+}
+.modal__text a:hover {
+  color: #a754e2;
+  text-decoration: underline;
+}
+.modal__article h1,
+.modal__article h2,
+.modal__article h3,
+.modal__article h4,
+.modal__article h5,
+.modal__article h6 {
+  color: #343434;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+.modal__article h1:last-child,
+.modal__article h2:last-child,
+.modal__article h3:last-child,
+.modal__article h4:last-child,
+.modal__article h5:last-child,
+.modal__article h6:last-child {
+  margin-bottom: 0;
+}
+.modal__article h1 {
+  font-size: 30px;
+}
+.modal__article h2 {
+  font-size: 26px;
+}
+.modal__article h3 {
+  font-size: 22px;
+}
+.modal__article h4 {
+  font-size: 20px;
+}
+.modal__article h5 {
+  font-size: 18px;
+}
+.modal__article h6 {
+  font-size: 16px;
+}
+.modal__article img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+  border-radius: 20px;
+}
+.modal__article img:last-child {
+  margin-bottom: 0;
+}
+.modal__article p {
+  display: block;
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 400;
+  color: #505050;
+  margin-bottom: 20px;
+}
+.modal__article p b {
+  font-weight: 500;
+}
+.modal__article p a {
+  color: #647dee;
+  text-decoration: underline;
+}
+.modal__article p a:hover,
+.modal__article p a:focus {
+  color: #a754e2;
+  text-decoration: none;
+}
+.modal__article p:last-child {
+  margin-bottom: 0;
+}
+.modal__article blockquote {
+  display: block;
+  position: relative;
+  padding: 0 0 0 20px;
+  font-size: 16px;
+  line-height: 26px;
+  color: #343434;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+.modal__article blockquote:before {
+  content: '';
+  position: absolute;
+  display: block;
+  left: 0;
+  top: 4px;
+  bottom: 5px;
+  width: 3px;
+  background-image: linear-gradient(0deg, #647dee 0%, #a754e2 100%);
+  border-radius: 3px;
+}
+.modal__article blockquote:last-child {
+  margin-bottom: 0;
+}
+.modal__article ul {
+  margin-bottom: 20px;
+  padding-left: 20px;
+  display: block;
+  list-style: circle;
+}
+.modal__article ul li {
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 400;
+  color: #505050;
+  padding-left: 5px;
+}
+.modal__article ul:last-child {
+  margin-bottom: 0;
+}
+.modal__article ol {
+  padding-left: 0;
+  list-style: none;
+  counter-reset: li;
+  margin-bottom: 20px;
+}
+.modal__article ol ol {
+  padding-left: 15px;
+  margin-bottom: 0;
+  margin-top: 20px;
+}
+.modal__article ol ol li {
+  margin-top: 0;
+}
+.modal__article ol ol ol {
+  margin-top: 20px;
+  margin-bottom: 0;
+}
+.modal__article ol li {
+  font-size: 16px;
+  line-height: 26px;
+  color: #505050;
+  position: relative;
+  margin-top: 20px;
+}
+.modal__article ol li b {
+  font-weight: 500;
+  color: #505050;
+}
+.modal__article ol li a {
+  color: #647dee;
+}
+.modal__article ol li a:hover {
+  color: #a754e2;
+  text-decoration: underline;
+}
+.modal__article ol li:last-child {
+  margin-bottom: 0;
+}
+.modal__article ol li:before {
+  counter-increment: li;
+  content: counters(li, ".") ". ";
+}
+.modal__article ol:last-child {
+  margin-bottom: 0;
+}
+@media (min-width: 768px) {
+  .modal {
+    padding: 40px 15px;
+  }
+  .modal__title {
+    margin-bottom: 40px;
+  }
+}
+/* custom close btn for modal */
+.mfp-image-holder .mfp-close,
+.mfp-iframe-holder .mfp-close {
+  right: 0;
+  opacity: 1;
+  width: 30px;
+  height: 40px;
+  padding-right: 0;
+}
+.mfp-image-holder .mfp-close:hover,
+.mfp-iframe-holder .mfp-close:hover {
+  color: #a754e2;
+}
+.mfp-bg {
+  background: transparent;
+  background-color: rgba(0,0,0,0.5);
+  background-image: linear-gradient(90deg, rgba(100,125,238,0.25) 0%, rgba(167,84,226,0.25) 100%);
+  opacity: 1;
+}
+.mfp-iframe-scaler {
+  border-radius: 20px;
+}
+.mfp-iframe-scaler iframe {
+  box-shadow: none;
+  border-radius: 20px;
+}
+.my-mfp-zoom-in.mfp-ready.mfp-bg {
+  opacity: 0.8;
+}
+.my-mfp-zoom-in .zoom-anim-dialog {
+  opacity: 0;
+  transition: all 0.4s ease-in-out;
+  transform: scale(0.8);
+}
+.my-mfp-zoom-in.mfp-ready .zoom-anim-dialog {
+  opacity: 1;
+  transform: scale(1);
+}
+.my-mfp-zoom-in.mfp-removing .zoom-anim-dialog {
+  transform: scale(0.8);
+  opacity: 0;
+}
+.my-mfp-zoom-in.mfp-bg {
+  opacity: 0;
+  transition: opacity 0.4s ease-out;
+}
+.my-mfp-zoom-in.mfp-ready.mfp-bg {
+  opacity: 0.8;
+}
+.my-mfp-zoom-in.mfp-removing.mfp-bg {
+  opacity: 0;
+}
+.mfp-fade.mfp-bg {
+  opacity: 0;
+  transition: all 0.4s ease-in-out;
+}
+.mfp-fade.mfp-bg.mfp-ready {
+  opacity: 0.8;
+}
+.mfp-fade.mfp-bg.mfp-removing {
+  opacity: 0;
+}
+.mfp-fade.mfp-wrap .mfp-content {
+  opacity: 0;
+  transition: all 0.34s ease-in-out;
+}
+.mfp-fade.mfp-wrap.mfp-ready .mfp-content {
+  opacity: 1;
+}
+.mfp-fade.mfp-wrap.mfp-removing .mfp-content {
+  opacity: 0;
+}
+@-moz-keyframes progress-bar-stripes {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 100px 0;
+  }
+}
+@-webkit-keyframes progress-bar-stripes {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 100px 0;
+  }
+}
+@-o-keyframes progress-bar-stripes {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 100px 0;
+  }
+}
+@keyframes progress-bar-stripes {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 100px 0;
+  }
+}

@@ -1,0 +1,151 @@
+body {
+  font-family: Overpass, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  color: white;
+  font-weight: 400;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+.ml15 {
+  margin-left: 15px;
+}
+.mr15 {
+  margin-right: 15px;
+}
+.pt70 {
+  padding-top: 70px;
+}
+.pb40 {
+  padding-bottom: 40px;
+}
+::-webkit-scrollbar {
+  background: 0 0;
+  width: 3px;
+  height: 6px;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.07);
+  border: solid rgba(88, 88, 88, 0.12) 2px;
+  border-radius: 5px;
+}
+.dark-bb {
+  border-bottom: 1px solid #2a2e39;
+}
+@keyframes pulse {
+  0% {
+    opacity: 1;
+    width: 7px;
+    height: 7px;
+    left: 0;
+    top: 0;
+  }
+  95% {
+    opacity: 0.1;
+    left: -10.5px;
+    top: -10.5px;
+    width: 28px;
+    height: 28px;
+  }
+  100% {
+    opacity: 0;
+    width: 7px;
+    height: 7px;
+    left: 0;
+    top: 0;
+  }
+}
+@keyframes slideIn {
+  0% {
+    transform: translateY(1rem);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  0% {
+    transform: translateY(1rem);
+    opacity: 0;
+  }
+}
+header nav a {
+  color: #18214d;
+}
+header nav a:hover {
+  color: #007bff;
+}
+.navbar-expand-lg .navbar-nav .nav-link {
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+header .nav-link.btn {
+  padding: 5px 0;
+}
+.header-img-icon a:after {
+  display: none;
+}
+.header-img-icon .nav-link img {
+  width: 30px;
+}
+#dark header nav a {
+  color: #fff;
+}
+#dark header nav a:hover {
+  color: #1fc7d4;
+}
+#dark header nav a.btn:hover {
+  color: #fff;
+}
+.ws {
+  padding: 8px 0;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 5px;
+  border: none;
+  text-align: center;
+}
+.ws:hover {
+  color: #fff;
+}
+@media only screen and (max-width: 768px) {
+  header button.navbar-toggler i {
+    font-size: 30px;
+    color: #4a4a4a;
+  }
+  header button.navbar-toggler:focus {
+    outline: 0;
+  }
+  #dark header button.navbar-toggler i {
+    color: #c5cbce;
+  }
+}
+.connect_btn {
+  display: inline-block;
+  font-size: 20px;
+  text-transform: uppercase;
+  line-height: 28px;
+  background: #64ce7b;
+  color: #fff;
+  padding: 10px 38px;
+  border-radius: 50px;
+  font-weight: 500;
+  border: 2px solid transparent;
+  transition: 0.3s;
+}
+.connect_btn:hover {
+  color: #64ce7b;
+  background-color: transparent;
+  border-color: #64ce7b;
+}
+@font-face {
+    font-family: Aquire;
+    src: url(../webfonts/Aquire.otf) format("truetype");
+}
